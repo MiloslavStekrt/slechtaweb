@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Šlechtická Soukroma Škola</title>
+        <link rel="stylesheet" href="/main.css">
+        <link rel="icon" type="image/png" href="/icon/logo.png" sizes="96x96">
+        <style>
+.app {
+    display: flex;
+    background: #000;
+    padding: 50px;
+    justify-content: center;
+}
+.app * {
+    padding: 10px;
+}
+.showside {
+    width: 20vw;
+}
+
+
+.showside img {
+    width: 100%;
+    height: 100%;
+}
+.text {
+    width: 50vw;
+    padding: 10px;
+}
+        </style>
+    </head>
+    <body>
+        <%- include("parts/header") %>
+        <main>
+            <section class="app">
+                <article class="showside">
+                    <img src="/something.jpg">
+                </article>
+                <article class="text">
+                    <h1>Google Meet</h1>
+                    <p>
+                        Během školního roku za účelem 
+                        distanční jsme využívali<a class="normal" href="https://meet.google.com">google meet</a>.
+                        Při předběžné dohodě se můžeme sejit na<a class="normal" href="https://meet.google.com">
+                        Schůzce</a>
+                    </p>
+                </article>
+            </section>
+            <section class="app">
+                <article class="showside">
+                    <img src="/something.jpg">
+                </article>
+                <article class="text">
+                    <h1>Google classroom</h1>
+                    <p>
+                        Během školního roku za účelem 
+                        distanční jsme využívali<a class="normal" href="https://classroom.google.com">
+                        google classroom</a>. Který má vcelku efektivní sdílení souborů nebo dělání testu atd.
+                    </p>
+                </article>
+            </section>
+            <section class="app">
+                <article class="showside">
+                    <img src="/something.jpg">
+                </article>
+                <article class="text">
+                    <h1>Bakalaři</h1>
+                    <p>
+                        Během školního se nám do rukou dostali bakalaře, který pomáhají studemtum nebo jejich rodíčum
+                        vědět o svých známkách.
+                    </p>
+                    <p>
+                        <a href="https://sssr.bakalari.cz" class="normal">Bakalari</a>
+                    </p>
+                </article>
+            </section>
+        </main>
+        <%- include("parts/footer") %>
+    </body>
+</html>

@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+footer {
+    padding: 30px 0;
+    text-align: center;
+    background: #fdc82f;
+}
+
+footer p {
+    color: #000 !important;
+}
+
+body * {
+    margin: 0;
+    color: #DDD;
+}
+
+a {
+    text-decoration: none;
+    padding: 0 5px;
+}
+.hover {
+    padding: 20px 0;
+}
+
+.hover a:hover {
+    color: #fdc82f;
+}
+a.normal {
+    color: #fdc82f;
+}
+
+
+.header {
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+header {
+    background: url("something.jpg") no-repeat center center #000;
+}
+.shower {
+    background-color: #000;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.offer a:hover img.main{
+    display: none
+}
+.offer a:hover img.sec{
+    display: block;
+}
+.offer a img.sec{
+    display: none;
+}
+
+
+.shower .text {
+    width: 60vw;
+    border: 1px solid #fdc82f;
+    padding: 15px;
+    min-width: 459px;
+}
+.shower .text p {
+    padding-bottom: 5px;
+}
+
+.ontop, .navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1000px;
+}
+.navbar p {
+    padding: 20px 0;
+}
+.logo {
+    display: flex;
+    font-size: 150%;
+}
+.logo img {
+    padding: 5px;
+}
+
+.navbar {
+    font-size: 90%;
+}
+.ontop .navtop a {
+    padding: 10px 0 10px 30px;
+    font-size: 80%;
+}
+
+.enticer {
+    height: 37.5vw;
+}
+.offer {
+    display: flex;
+    background: #000;
+}
+.wellcome {
+    text-align: center;
+    background: #000;
+    padding: 100px 0 50px 0;
+}
+
+
+.wellcome h1 {
+    color: #FDC82F;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 5vh;
+    padding-bottom: 50px
+}
+.wellcome p {
+    font-size: 3vh;
+    max-width: 600px;
+    margin: 25px auto
+}
+
+.offer a{
+    width: 20vw;
+    margin: 0 0.5px;
+    min-width: 150px;
+    padding: 0;
+}
+.offer a:hover {
+    cursor: pointer;
+}
+.offer a img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    min-width: 153px;
+}
+
+.share {
+    display: flex;
+}
+.navtop {
+    display: flex;
+}
+.hr-top {
+    background-color: #000 !important;
+    margin: 10px 0;
+}
+.buttons button {
+    color: #959595;
+    background-color: #000;
+    border: 1px solid #959595;
+    font-size: 2.5vh;
+    padding: 5px 10px;
+    margin: 5px 10px;
+    cursor: pointer;
+}
+.clicked {
+    color: #fdc82f !important;
+    background-color: #000 !important;
+    border: 1px solid #fdc82f !important;
+}
+.none {
+    display: none;
+}
+
+.buttons button:hover {
+    border: 1px solid #fdc82f;
+    background-color: #fdc82f;
+    color: #000;
+}
+button#menu {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+.subtitle {
+    color: #969696
+}
+.black {
+    color: #000;
+}
+section.new {
+    background: #000;
+    color: #fdc82f;
+    padding: 50px;
+    text-align: center;
+}
+.new article {
+    padding: 10px
+}
+.new article div {
+    justify-content: space-between;
+}
+
+
+
+
+
+@media screen and (max-width: 750px) {
+    .offer {
+        display: flex;
+        flex-direction: column;
+    }
+    .offer a {
+        width: 100%;
+    }
+}
