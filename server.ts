@@ -1,10 +1,10 @@
 import {Request, Response} from "express";
 import path from "path";
-
+require("dotenv").config();
 
 const express = require("express")
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 0;
 
 app.use(express.static("public"))
 app.use(require('serve-favicon')(path.join(__dirname, 'public', 'turtle.svg')))
