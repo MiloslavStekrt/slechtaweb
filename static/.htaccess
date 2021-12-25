@@ -1,6 +1,0 @@
-Test.
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteRule ^$ pages/home.php [QSA,L]                                                                                                                 
-RewriteRule ^deska$ pages/deska.php [QSA,L]
-</IfModule>

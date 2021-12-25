@@ -2,6 +2,7 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    font-size: 1em;
 }
 footer {
     padding: 30px 0;
@@ -22,6 +23,9 @@ a {
     text-decoration: none;
     padding: 0 5px;
 }
+button {
+    cursor: pointer;
+}
 .hover {
     padding: 20px 0;
 }
@@ -38,8 +42,11 @@ a.normal {
     padding: 10px 0;
     background-color: rgba(0, 0, 0, 0.8);
 }
-header {
+header.home {
     background: url("something.jpg") no-repeat center center #000;
+}
+header {
+    background: #333;
 }
 .shower {
     background-color: #000;
@@ -49,13 +56,26 @@ header {
     padding-bottom: 50px;
 }
 .offer a:hover img.main{
-    display: none
+    display: none;
 }
 .offer a:hover img.sec{
     display: block;
 }
 .offer a img.sec{
     display: none;
+    animation: 1s secimg ease;
+}
+.finfo {
+    background: #000;
+    padding: 20px;
+    text-align: center;
+}
+.finfo h1 {
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+.lblack {
+    color: #444 !important;
 }
 
 
@@ -126,13 +146,53 @@ header {
     margin: 0 0.5px;
     min-width: 150px;
     padding: 0;
-}
-.offer a:hover {
     cursor: pointer;
 }
 .offer a img {
+    animation: .75s firstimgload ease;
     width: 100%;
     height: 100%;
+}
+.library {
+    background: #000;
+    height: 35vw;
+    padding: 10px;
+    display: flex;
+}
+.library div{
+    background-size: cover !important;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.library .prev, .library .next {
+    width: 20%;
+    margin: 10% 1%;
+    height: 50%;
+}
+.library svg {
+    width: 50%;
+    height: 50%;
+    padding: 35% 25%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.img-show {
+    animation: 1s showimg ease;
+}
+.library .prev:hover, .next:hover {
+    cursor: pointer;
+}
+h1#text {
+    background: rgba(0,0,0,.5);
+    margin-top: 29vw;
+    padding: 1vw;
+    text-align: center;
+}
+.active {
+    background: none !important;
+}
+.active:hover {
+    cursor: default !important;
 }
 
 
@@ -213,11 +273,46 @@ section.new {
 .new article div h3 {
     color: #666;
 }
+.space {
+    padding: 25px;
+    background: #000;
+}
+table.schedule {
+    width: 100%;
+    text-align: center;
+    cursor: default;
+}
+table.schedule tr * {
+    padding: 5px;
+}
+table.schedule tr th {
+    background: #333;
+}
+table.schedule tr td:hover {
+    background: #111;
+}
+h1.schedule {
+    padding: 10px;
+    text-align: center;
+}
+
+.rowbtn {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.rowbtn button {
+    background: #444;
+    border: 2px solid #777;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
 
 
+@media only screen and (max-device-width: 768px)
+/* @media only screen and (max-width: 750px) */
 
-
-@media screen and (max-width: 750px) {
+{
     .offer {
         display: flex;
         flex-direction: column;
@@ -226,3 +321,38 @@ section.new {
         width: 100%;
     }
 }
+
+
+@keyframes secimg{
+    from {
+        margin: 10%;
+        width: 80%;
+        height: 80%;
+    }
+    to {
+        margin: 0;
+        width: 100%;
+    }
+}
+@keyframes showimg {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+@keyframes firstimgload{
+    from {
+        opacity: 10%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+
+
+
+
+

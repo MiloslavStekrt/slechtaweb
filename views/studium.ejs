@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pro Zájemce</title>
+        <link rel="stylesheet" href="/main.css">
+        <link rel="icon" type="image/png" href="/icon/logo.png" sizes="96x96">
+    </head>
+    <body>
+        <%- include("parts/header") %>
+        <main>
+            <section class="library">
+                <div id="prev" class="prev" onclick="changeUp()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5zM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5z"/> </svg>
+                </div>
+                <div id="now" class="now">
+                    <h1 id="text"></h1>
+                </div>
+                <div id="next" class="next" onclick="changeDown()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5z"/> </svg>
+                </div>
+            </section>
+            <section class="space"></section>
+            <hr class="lblack">
+            <section class="finfo">
+                <h1> Trochu historie jen tak někoho nezabije </h1>
+                <p>Naše škola vznikla jako rozšíření řetězců škol ale později byla odkoupena od společnost BEAN s.r.o. Praha.</p>
+            </section>
+            <section class="finfo">
+                <h1>Obory naší školy</h1>
+                <p>Naše škola nabízí dálkový a nebo denní typ studia. S různými typy jak už účební či maturní nebo pomaturitní formou.</p>
+                </br>
+                <p>Vybírat můžete třeba z <a class="normal">Mimoškolní Pedagogiky</a>, <a class="normal">Obchodní akademie</a>, <a class="normal">
+                Gymnazia</a>nebo<a class="normal">Komeníckého řemesla</a>.</p> 
+                </br>
+                <p>Škola nabízí třeba i kurzy<a class="normal">Cizích jazyku(Angličtina, Němčina)</a>, <a class="normal">obsluhy PC</a>, 
+                <a class="normal">práce s Excelem, Wordem...</a></p>
+            </section>
+            <section class="finfo">
+                <h1>Příjmací řízení</h1>
+                <p>Naše škola pořádá 2 kola příjmacího řízení. Pro bližší informace si raději přečtěte <a class="normal" href="/prijmacky.pdf">tento pdf</a>
+                dokument</p>
+            </section>
+            <section class="finfo">
+                <h1></h1>
+                <p></p>
+            </section>
+            <%- include("parts/footer") %>
+        </main>
+        <script>
+            let ImgNormal = [
+                {img: "school-girl.jpg", text: "Naše školni budova"},
+                {img: "school-girl2.jpg", text: "Naše nadherné zahrady"},
+                {img: "school-girl3.jpg", text: "Naše nádherné hodiny"},
+                {img: "school-girl5.jpg", text: "Výborný výhled při východu z budovy"}
+            ]
+        </script>
+        <script src="/library.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -20,6 +20,12 @@ app.get("/software", (req: Request, res: Response) => {
 app.get("/novinky", (req: Request, res: Response) => {
     return res.render("novinky")
 })
+app.get("/studium", (req: Request, res: Response) => {
+    return res.render("studium")
+})
+app.get("/student", (req: Request, res: Response) => {
+    return res.render("student")
+})
 
 
 

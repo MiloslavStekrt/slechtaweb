@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pro Studenty</title>
+        <link rel="stylesheet" href="/main.css">
+        <link rel="icon" type="image/png" href="/icon/logo.png" sizes="96x96">
+    </head>
+    <body>
+        <%- include("parts/header") %>
+        <main>
+            <section class="space"></section>
+            <section class="shower">
+                <article class="buttons" id="btn-list">
+                    <button value=0 id="btn0" onclick="show(this)">3. OA</button>
+                </article>
+                <article class="text">
+                    <div id="showerIt"></div>
+                </article>
+            </section>
+            <hr class="lblack">
+            <section class="finfo">
+                <h1>O maturitě</h1>
+                <a class="normal" href="/maturita/harmonogram.pdf">Harmonogram ústních zkoušek</a>
+                <a class="normal" target="_blank" href="https://maturita.cermat.cz">Cermat - Statní maturita</a>
+            </section>
+            <section class="finfo">
+                <h1>Jídelníček</h1>
+                <a class="normal" target="_blank" href="/obed/tento.pdf">Tento Týden</a>
+                <a class="normal" target="_blank" href="/obed/dalsi.pdf">Příští Týden</a>
+            </section>
+            <section class="finfo">
+                <h1>Ubytování</h1>
+                <p>Cena <a class="normal">2.400,-</a> na měsíc je stanovena pro možnost ubytování</p>
+            </section>
+        </main>
+        <%- include("parts/footer") %>
+        <script>
+            let content = [
+                [
+                    "Obchodní Akademie",
+                    [
+                        ["D", "HV", "Cer", "Cer", "AJ", "AJ", "TV", "TV"],
+                        ["M", "M", "D", "Eko", "CJ", "Kom", "Kom", ""],
+                        ["Eko", "Aj", "Eko", "M", "NJ", "NJ", "", ""],
+                        ["NJ", "CJ", "CJ", "CP", "CP", "", "", ""],
+                        ["ON", "ON", "Cer", "Cer", "", "", "", ""],
+                        ["", "", "", "", "", "", "", ""],
+                        ["", "", "", "", "", "", "", ""],
+                        ["", "", "", "", "", "", "", ""],
+                        ["", "", "", "", "", "", "", ""],
+                        ["", "", "", "", "", "", "", ""],
+                        ["Uct", "CJ", "AJ", "AJ", "Eko", "Eko", "TV", "TV"],
+                        ["Uct", "Uct", "NJ/RJ", "NJ/RJ", "", "PV", "", ""],
+                        ["CJ", "M", "NJ/RJ", "NJ/RJ", "LS", "Cer", "Cer", ""],
+                        ["Eko", "M", "M", "AJ", "AJ", "Inf", "Inf", ""],
+                        ["CJ", "Eko", "Pv", "", "Psy", "Psy", "", ""],
+                        ["Eko", "Eko", "Cer", "LS", "SA-NJ", "SA-NJ", "TV", "TV"],
+                        ["NJ-RJ", "NJ-RJ", "CJ", "CJ", "Uct", "SUCT", "SUCT", ""],
+                        ["", "CJ", "M", "PV", "PV", "", "", ""],
+                        ["M", "AJ", "AJ", "Inf", "Inf", "FI", "SM", "SM"],
+                        ["FI", "CJ", "Uct", "Uct", "Eko", "Eko", "", ""],
+                    ],
+                    [4, 5]
+                ],[
+                    "Gymnazium",
+                    [
+                        ["D", "CH", "CH", "Bi", "AJ", "AJ", "TV", "TV"],
+                        ["M", "M", "D", "F", "CJ", "F", "", ""],
+                        ["", "AJ", "CH", "M", "NJ", "NJ", "", ""],
+                        ["NJ", "CJ", "CJ", "HV", "HV", "F", "", ""],
+                        ["ON", "ON", "Bi", "Bi", "Z", "Z", "", ""],
+                        ["AJ", "AJ", "D", "F", "HV", "HV", "TV", "TV"],
+                        ["CJ", "CJ", "M", "CH", "NJ", "F", "F", ""],
+                        ["NJ", "NJ", "Bi", "Bi", "Z", "Z", "RJ", "RJ"],
+                        ["CJ", "Inp", "AJ", "M", "M", "CH", "CH", ""],
+                        ["Z", "Bi", "ON", "ON", "D", "", "", ""],
+                        ["CH", "CJ", "AJ", "AJ", "F", "F", "TV", "TV"],
+                        ["", "F", "NJ", "NJ", "", "", "", ""],
+                        ["CJ", "M", "NJ", "NJ", "LS", "CH", "CH", ""],
+                        ["D", "M", "NJ", "NJ", "LS", "CH", "CH", ""],
+                        ["CJ", "D", "Z", "Z", "Psy", "Psy", "", ""],
+                        ["", "SSV", "SSV", "LS", "SA-NJ", "SA-NJ", "TV", "TV"],
+                        ["NJ", "NJ", "CJ", "CJ", "SFY", "", "", ""],
+                        ["M", "CJ", "M", "Z", "", "", "", ""],
+                        ["M", "AJ", "AJ", "Inf", "SInf", "F", "", "SBI"],
+                        ["F", "CJ", "D", "D", "", "", "", ""]
+                    ],
+                    [4, 5]
+                ],[
+                    "Dálková Obchodní Akademi",
+                    [
+                        ["CJ", "M", "M", "AJ", "Eko", "Uct", "AJ", "NJ", "", "", "ČP", "ČP"],
+                        ["CJ", "AJ", "NJ", "NJ", "Psy", "Uct", "Eko", "D", "D", "CJ", "Inf", "CER"],
+                        ["NJ", "CJ", "CER", "", "M", "SEM", "PV", "AJ", "NJ", "NJ", "Psy", "Psy"],
+                        ["AJ", "M", "Uct", "Uct", "Eko", "CJ", "Eko", "CJ", "Inf", "ON", "PEK", "AJ"],
+                        ["", "", "", "", "", "", "", "", "", "", "", ""],
+                        ["", "", "", "", "", "", "", "", "", "", "", ""],
+                        ["", "N/A/R", "N/A/R", "Uct", "CJ", "", "Eko", "Eko", "M", "M", "Cer", ""],
+                        ["", "CJ", "CJ", "PV", "Eko", "PV", "Uct", "SINT/Uct", "LS", "N/A/R", "KN/A/R/M", "Inf"]
+                    ],
+                    [4, 2]
+                ],[
+                    "D S",
+                    [
+                        ["CJ", "M", "M", "A/N", "Eko", "Uct", "AJ", "", "", "", "", ""],
+                        ["CJ", "AJ", "NJ", "NJ", "Psy", "Uct", "Eko", "D", "D", "CJ", "Inf", ""],
+                        ["NJ", "CJ", "MMN", "", "M", "SEM", "PV", "AJ", "R/N", "R/N", "Psy", "Psy"],
+                        ["R/A", "M", "Uct", "Uct", "Eko", "CJ", "Eko", "CJ", "Inf", "ON", "PEK", "AJ"],
+                        ["PRA", "N/A", "N/A", "Eko", "CJ", "PEK", "Uct", "Uct", "M", "M", "CHP", "CHP"],
+                        ["PRA", "CJ", "CJ", "PV", "Uct", "PV", "Inf", "Eko", "LS", "N/A", "SA/N", "ON"]
+                    ],
+                    [3, 2]
+                ],[
+                    "P E D",
+                    [
+                        ["", "Psy", "CJ", "CJ", "A/N", "DHV", "M", "ČP", "D", "", "", ""],
+                        ["", "Eko", "A/N", "A/N", "M", "PED", "D", "Eko", "DPV", "DVV", "DDV", ""],
+                        ["", "", "DPV", "DVV", "DHV", "CJ", "CJ", "A/N", "RJ", "", "", ""],
+                        ["", "", "M", "M", "A/N", "A/N", "CJ", "ČP", "DDV", "KOM", "PED", "Psy"],
+                        ["", "Eko", "", "M", "DDV", "A/N/R", "A/N/R", "CJ", "", "", "", ""],
+                        ["", "", "Inf", "CJ", "CJ", "M", "KA/N/R", "DHV", "PED", "Psy", "DPV", "DVV"],
+                        ["", "", "Inf", "CJ", "CJ", "M", "KA/N/R", "DHV", "PED", "Psy", "DPV", "DVV"],
+                        ["", "N/A", "N/A", "KOM", "CJ", "M", "DPV", "DVV", "DHV", "DDV", "PED", "Psy"],
+                        ["", "CJ", "CJ", "PV", "Inf", "PV", "M", "SMP", "LS", "N/A", "KN/A", ""],
+                    ],
+                    [4, 2]
+                ],[
+                    "Pedagogika",
+                    [
+                        ["", "", "AJ", "AJ", "Ek", "Ek", "Tv", "TV"],
+                        ["", "ČJ", "AJ", "AJ", "Ek", "Ek", "Tv", "TV"],
+                        ["Uč", "ČJ", "AJ", "AJ", "Ek", "Ek", "", ""],
+                        ["Uč", "ČJ", "AJ", "AJ", "Ek", "Ek", "", ""],
+                        ["Uč", "ČJ", "AJ", "AJ", "Ek", "Ek", "Tv", ""],
+                        ["Uč", "ČJ", "", "", "", "", "Tv", ""],
+                    ],
+                    [3, 2]
+                ],[
+                    "Podnikání",
+                    [
+                        ["", "", "AJ", "AJ", "Ek", "Ek", "Tv", "TV"],
+                        ["", "ČJ", "AJ", "AJ", "Ek", "Ek", "Tv", "TV"],
+                        ["Uč", "ČJ", "AJ", "AJ", "Ek", "Ek", "", ""],
+                        ["Uč", "ČJ", "AJ", "AJ", "Ek", "Ek", "Tv", ""],
+                        ["Uč", "ČJ", "AJ", "AJ", "Ek", "Ek", "Tv", ""],
+                        ["Uč", "ČJ", "", "", "", "", "Tv", ""],
+                    ],
+                    [3, 2]
+                ],[
+                    "Kominik",
+                    [
+                        ["Uč", "ČJ", "AJ", "AJ", "Ek", "Ek", "Tv", "TV"],
+                        ["Uč", "ČJ", "AJ", "AJ", "Ek", "Ek", "Tv", "TV"],
+                        ["Uč", "ČJ", "", "", "", "", "Tv", ""],
+                        ["Uč", "ČJ", "", "", "", "", "Tv", ""],
+                        ["Uč", "ČJ", "", "", "", "", "Tv", ""],
+                    ],
+                    [1, 5]
+                ]
+            ];
+            let btnlist = document.getElementById("btn-list")
+            btnlist.innerHTML = '';
+            for (let i=0; i<content.length; i++) {
+                btnlist.innerHTML += '<button value='+i+' id="btn'+i+'" onclick="show(this)">'+content[i][0]+'</button>'
+            }
+            let days = ["Po", "Ut", "St", "Čt", "pa", "1.", "2.", "3.", "4."];
+            let last = 0, lastgrade = 0;
+            let grade;
+            let hours = 8;
+            let hoursid = 0;
+            change(0, 0);
+
+            function show(e) {
+                document.getElementById("btn"+last).classList.remove("clicked");
+                change(e.value, 0);
+            }
+            
+            function getOnlyCap(str) {
+                if (str.includes(" "))
+                    return str.replace(/[^A-Z]/g, "")
+                else return str.substring(0,2);
+            }
+
+            function genBtn(id, clas) {
+                let div = document.createElement("div")
+                div.classList.add("rowbtn")
+
+                for (let i=0; i<content[id][2][0]; i++) {
+                    let button = document.createElement("button");
+                    button.id = "btn"+id+""+i;
+                    button.value = id+"_"+i;
+                    button.addEventListener('click', e => {
+                        let x = e.target.value.split("_");
+                        document.getElementById("btn"+last).classList.remove("clicked");
+                        change(parseInt(x[0]), parseInt(x[1]))
+                    });
+                    button.innerHTML = (i+1)+". "+getOnlyCap(content[id][0])
+                    div.appendChild(button);
+                }
+                return div;
+            }
+            function genTBody(id, clas) {
+                let tbody = document.createElement("tbody");
+                let sh = content[id][2];
+                let maxIn = sh[1] * clas;
+                let endIn = sh[1]+maxIn;
+                let starting_point = 0;
+                if (content[id][2][1] <= 2) starting_point = 5
+
+                for (let i=maxIn; i<endIn; i++) {
+                    let tr = document.createElement("tr");
+                    tr.innerHTML = "<th>"+days[starting_point]+"</th>"
+                        +content[id][1][i].map(e => "<td>"+e+"</td>").join("")
+                    tbody.appendChild(tr);
+                    starting_point++;
+                }
+                return tbody;
+            }
+            function genTHead(id) {
+                let tr = document.createElement("tr");
+                let str = "<td></td>"
+                let i = 0;
+                let h = 8;
+                if (content[id][2][1] <= 2) {
+                    i = -1;
+                    h = 11
+                }
+
+                for (; i<h; i++)
+                    str+= "<th>"+(i+1)+"</th>";
+                tr.innerHTML = str;
+                return tr;
+            }
+
+            function renRozvrh(id, clas) {
+                let parentSI = document.getElementById("showerIt");
+                parentSI.innerHTML = "";
+
+                // buttons on schedule
+                parentSI.appendChild(genBtn(id, clas))
+
+                // h1 schedule
+                let h1 = document.createElement("h1");
+                h1.innerHTML = (clas+1)+". "+content[id][0];
+                h1.classList.add("schedule");
+                parentSI.appendChild(h1)
+
+                // thead and tbody;
+                let thead = genTHead(id);
+                let tbody = genTBody(id, clas)
+                // table schedule generate
+                let table = document.createElement("table");
+                table.classList.add("schedule");
+                table.appendChild(thead);
+                table.appendChild(tbody);
+                parentSI.appendChild(table)
+            }
+
+            function change(id, clas) {
+                if (typeof clas == undefined) clas = 0;
+                lastgrade = clas;
+                renRozvrh(id, clas);
+                document.getElementById("btn"+id).classList.add("clicked");
+                last = id;
+            }
+        </script>
+    </body>
+</html>

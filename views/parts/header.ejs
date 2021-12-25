@@ -1,4 +1,10 @@
-<header>
+<%
+    if(!locals.bgclass) bgclass = "";
+    if(!locals.enticer) enticer= false;
+%>
+
+
+<header class="<%= bgclass %>">
     <section class="header">
         <article class="ontop">
             <div class="share">
@@ -47,7 +53,7 @@
             </nav>
         </article>
     </section>
-    <section class="enticer">
-        <h1></h1>
-    </section>
+    <% if(enticer == true){ %>
+        <section class="enticer"></section>
+    <% } %>
 </header>
